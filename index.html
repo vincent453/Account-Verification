@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Verification</title>
+    <!-- CSS only -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        margin: 2rem;
+    }
+    h2{
+        font-size: 1.3rem;
+        position: relative;
+        top: 12rem;
+        font-weight: 700;
+        text-align: center;
+        color: rgb(167, 73, 73);
+    }
+    .please{
+        position: relative;
+        top: 14em;
+    }
+    .container{
+        width: 30rem;
+        height: 44rem;
+      
+        outline: #43c043 solid 1px;
+
+        background-color: rgb(247, 237, 237);
+        margin-top: 1rem;
+        text-align: center;
+        border-radius: 2%;
+
+    }
+
+    .img1{
+        width: 6rem;
+        position: relative;
+        top: 2.5rem;
+        
+        
+    }
+
+    .ball:hover{
+        transform: scale(0.8);
+    }
+    .ball{
+        height: 12rem;
+        width: 12rem;
+        border-radius: 12rem;
+        background-color: rgb(232, 195, 195);
+        position: relative;
+        top: 5rem;
+        left: 8rem;
+        transition: ease-out 1s;
+    }   
+
+    .btn{
+        width: 20rem;
+        border-radius: none;
+        position: relative;
+        top: 15rem;
+
+    }
+    .dont{
+        position: relative;
+        top: 18rem;
+        font-size: 0.8rem;
+        line-height: 2;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="ball">
+            <img src="download.png" alt="" class="img1">
+        </div>
+      
+        <h2>Account Verification</h2>
+        <p class="please">Please verify your account using the link sent<br> to your <b>email</b></p>
+
+        <a href="#" class="btn btn-success px-5 py-3">Procced <i class="fa-solid fa-circle-arrow-right"></i></a>
+
+        <p class="dont">Didn't receive the gmail? <a href="">Passward</a><br> in <b id="number"></b> second(s)</p>
+    </div>
+ <script>
+  let number = document.getElementById("number")
+  let counter= 25;
+
+  setInterval(( ) => {
+    counter -= 0;
+    number.innerHTML =counter;
+
+    if(counter == 0){
+        clearInterval();
+         
+    }else{
+        counter -= 1;
+    
+    }
+   
+    
+  }, 1000)
+ </script>   
+</body>
+</html>
